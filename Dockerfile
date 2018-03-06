@@ -10,7 +10,7 @@ RUN apt-get update
 RUN apt-get install -y apache2 && apt-get clean
 
 #ENTRYPOINT ["/usr/sbin/apache2", "-k", "start"]
-
+COPY index.html /var/www/html/index.html
 
 #ENV APACHE_RUN_USER www-data
 #ENV APACHE_RUN_GROUP www-data
